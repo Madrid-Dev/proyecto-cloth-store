@@ -1,9 +1,98 @@
+.container{
+    display: flex;
+    align-items: center;
+    padding-top: 7vh;
+    flex-direction: column;
+    font-family: 'Fira Sans', sans-serif;
+}
+.container h2{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+}
+.h2-container{
+    background-color: transparent;
+
+}
 .grid-container {
+    width: 90%;
     display: grid;
-    height: 50rem;
-    grid-template-columns: 2fr 1fr 1fr;
+    height: 45rem;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 'one two four' 'one two four-low';
     gap: 1.3rem;
     margin-top: 1.3rem;
+    background-color: white;
+    padding: 1rem;
+}
+.grid-container-inside-desktop  {
+   /* display: grid;
+    height: 50rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1.3rem;
+    background-color: white;*/
+    display: none;
+}
+
+
+/*Grid items*/
+.grid-item{
+    position: relative;
+    z-index: 0;
+}
+.grid-item p{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    color:white;
+    font-weight: 600;
+}
+.grid-item-one{
+    background-image: url('./../images/clothes/cottom-cyan-sweater.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.grid-item-two{
+    background-image: url('./../images/clothes/king-t-shirt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid-item-three{
+    background-image: url('./../images/clothes/orange-t-shirt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid-item-four{
+    background-image: url('./../images/clothes/top.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid-item-five{
+    background-image: url('./../images/clothes/thrasher.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*Discount*/
+.discount-container{
+    width: 100%;
+    height: 20vh;
+    background-color: #f3d503;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Information*/
+.information-container{
+    width: 100%;
+    height: 40vh;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
