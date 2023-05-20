@@ -1,0 +1,52 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "King T-Shirt",
+        "category": "t-shirt",
+        "price": 20.99,
+        "stock": 10,
+        "image": "./clothes/king-t-shirt.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Orange T-Shirt",
+        "category": "t-shirt",
+        "price": 20.99,
+        "stock": 3,
+        "image": "./clothes/orange-t-shirt.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Lana-Sweater",
+        "category": "sweater",
+        "price": 24.99,
+        "stock": 2,
+        "image": "./clothes/lana-sweater.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Beige Top",
+        "category": "other",
+        "price": 15.99,
+        "stock": 15,
+        "image": "./clothes/top.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Watch",
+        "category": "accesories",
+        "price": 44.99,
+        "stock": 2,
+        "image": "./clothes/accesories.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Cottom Sweater",
+        "category": "sweater",
+        "price": 10.00,
+        "stock": 15,
+        "image": "./clothes/cottom-cyan-sweater.jpg"
+      }
+    ]
+  }

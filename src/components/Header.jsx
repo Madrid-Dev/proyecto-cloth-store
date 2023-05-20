@@ -4,6 +4,7 @@ import './../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from './../images/Elevated-logos.jpeg';
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [mobileMenu,setMobileMenu] = useState(false);
@@ -25,10 +26,10 @@ const Header = () => {
         <div className={mobileMenu ? 'mobile-menu-display' : 'mobile-menu-off'} id='mobile-menu' >
             <div className='container-options-mbl'>
                 <ul>
-                    <li>Home</li>
-                    <li>Categories</li>
-                    <li>About us</li>
-                    <li>Contact us</li>
+                    <li><Link to= "/" onClick={()=>{setMobileMenu(!mobileMenu);toggleVisibility();}}>Home</Link></li>
+                    <li><Link to="/categories/all" onClick={()=>{setMobileMenu(!mobileMenu);toggleVisibility();}}>Products</Link></li>
+                    <li><Link to="/about-us" onClick={()=>{setMobileMenu(!mobileMenu);toggleVisibility();}}>About us</Link></li>
+                    <li><Link to="contact-us" onClick={()=>{setMobileMenu(!mobileMenu);toggleVisibility();}}>Contact us</Link></li>
                 </ul>
             </div>
         </div>

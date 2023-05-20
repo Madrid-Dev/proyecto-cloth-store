@@ -25,7 +25,7 @@
     height: 3rem;
     background-position: center;
     background-size: contain;
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     background-image: url('./../images/Elevated-logos.jpeg');
 }
 .cart{
@@ -64,12 +64,17 @@
 .mobile-menu-display ul{
     list-style: none;
     width: 100%;
+    text-align: center;
     padding-left: 0;
     font-size: 2rem;
 }
 .mobile-menu-display ul li{
     margin-top: 4rem;
     text-transform: uppercase;
+}
+.mobile-menu-display ul li a{
+    color:black;
+    text-decoration: none;
 }
 .mobile-menu-off{
     display: none;

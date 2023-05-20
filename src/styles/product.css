@@ -1,0 +1,74 @@
+h1{
+    width: 83%;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Header*/
+.container-header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.home-icon{
+    text-decoration: none;
+    color:black;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+.home-icon p{
+    margin: 0;
+    color: white;
+}
+/*General Container*/
+.product-container{
+    padding-top:10vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/*Grid*/
+.product-grid-container {
+    width: 90%;
+    display: grid;
+    min-height: 45rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.3rem;
+    margin-top: 1.3rem;
+    background-color: white;
+    padding: 1rem;
+}
+
+/*Filters*/
+.product-filters{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+}
+.product-filters ul{
+    width: 80%;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-filters ul li a{
+    text-decoration: none;
+    padding: 0.3rem;
+    color: black;
+}
+
+.blank{
+    width: 0;
+    height: 0;
+}
