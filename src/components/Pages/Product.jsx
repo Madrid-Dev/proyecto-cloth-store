@@ -48,7 +48,7 @@ function Product() {
               <Link to="/categories/all">All</Link>
             </li>
             <li>
-              <Link to="/categories/sweaters">Sweaters</Link>
+              <Link to="/categories/sweater">Sweaters</Link>
             </li>
             <li>
               <Link to="/categories/shoes">Shoes</Link>
@@ -73,9 +73,7 @@ function Product() {
               {return(<ProductCard productName = {producto.name} productPrice = {producto.price} key={producto.id} productImage={producto.image}/>)}
               else if(category === 'all'){
                 return(<ProductCard productName = {producto.name} productPrice = {producto.price} key={producto.id} productImage={producto.image}/>);
-              }else{
-                return(<div className='blank'></div>)
-              }             
+              }            
         })}
         </div>
         
