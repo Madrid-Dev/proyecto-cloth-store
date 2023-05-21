@@ -1,0 +1,102 @@
+/*Principals*/
+.wraper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.product-container{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Product header*/
+.product-container .product-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.product-container .product-header img{
+    width: 90%;
+
+}
+.product-container .product-header h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: lighter;
+
+}
+/*description*/
+.product-container .product-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+    padding: 1rem;
+    width: 90%;
+    margin-top: 2rem;
+    text-align: center;
+    flex-direction: column;
+}
+.product-container .product-description .product-price{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.product-container .product-description .product-price .quantity{
+    display: flex;
+    width: 30%;
+}
+/*Quantity interface*/
+.quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 60% !important;
+    font-size: 1.2rem;
+    
+}
+.quantity .plus{
+    border-left: 1px solid black;
+    padding: 1rem;
+}
+.quantity .less{
+    border-right: 1px solid black;
+    padding: 1rem;
+}
+.quantity .quantity-value{
+    padding: 1rem;
+}
+
+/*Buttons*/
+.product-buttons{
+    display: flex;
+    width: 130%;
+    justify-content: space-between;
+}
+.product-buttons .button{
+    width: 40%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    margin-top: 1rem;
+}
+.buy-button{
+    background-color: #f3e99c;
+}
+.add-cart-button{
+    background-color: black;
+    color: white;
+}
+
+.checkout{
+    font-size: 0.8rem;
+}

@@ -18,6 +18,8 @@ import { faMobile } from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Product from './components/Pages/Product';
+import ProductID from './components/ProductID';
+import Footer from './components/Footer';
 const Index = () => {
   library.add(faBars, faCartShopping,faCreditCard, faLocationPin, faExclamation, faRecycle,faHashtag,faXmark,faInfo, faMobile, faCopyright, faChevronLeft);
   return ( 
@@ -43,10 +45,11 @@ const Index = () => {
         }>
         </Route>
         <Route path='/product/:id' element = {
-            <App />
+            <ProductID />
         }>
         </Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </>
   );

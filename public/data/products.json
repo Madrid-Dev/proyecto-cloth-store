@@ -6,7 +6,8 @@
         "category": "t-shirt",
         "price": 20.99,
         "stock": 10,
-        "image": "./clothes/king-t-shirt.jpg"
+        "image": "./clothes/king-t-shirt.jpg",
+        "description": "Introducing our stylish and versatile T-shirt! Crafted with the perfect blend of comfort and contemporary design, this T-shirt is a must-have addition to your wardrobe. Made from premium quality, breathable cotton fabric, it ensures a soft and cozy feel against your skin, making it ideal for all-day wear. The lightweight material keeps you cool and fresh, allowing you to stay comfortable even in warm weather."
       },
       {
         "id": 2,
@@ -14,7 +15,9 @@
         "category": "t-shirt",
         "price": 20.99,
         "stock": 3,
-        "image": "./clothes/orange-t-shirt.jpg"
+        "image": "./clothes/orange-t-shirt.jpg",
+        "description": "Introducing our stylish and versatile T-shirt! Crafted with the perfect blend of comfort and contemporary design, this T-shirt is a must-have addition to your wardrobe. Made from premium quality, breathable cotton fabric, it ensures a soft and cozy feel against your skin, making it ideal for all-day wear. The lightweight material keeps you cool and fresh, allowing you to stay comfortable even in warm weather."
+
       },
       {
         "id": 3,
@@ -22,7 +25,9 @@
         "category": "sweater",
         "price": 24.99,
         "stock": 2,
-        "image": "./clothes/lana-sweater.jpg"
+        "image": "./clothes/lana-sweater.jpg",
+        "description": "Introducing our stylish and versatile T-shirt! Crafted with the perfect blend of comfort and contemporary design, this T-shirt is a must-have addition to your wardrobe. Made from premium quality, breathable cotton fabric, it ensures a soft and cozy feel against your skin, making it ideal for all-day wear. The lightweight material keeps you cool and fresh, allowing you to stay comfortable even in warm weather."
+
       },
       {
         "id": 4,
@@ -30,7 +35,9 @@
         "category": "other",
         "price": 15.99,
         "stock": 15,
-        "image": "./clothes/top.jpg"
+        "image": "./clothes/top.jpg",
+        "description": "Introducing our stylish and versatile T-shirt! Crafted with the perfect blend of comfort and contemporary design, this T-shirt is a must-have addition to your wardrobe. Made from premium quality, breathable cotton fabric, it ensures a soft and cozy feel against your skin, making it ideal for all-day wear. The lightweight material keeps you cool and fresh, allowing you to stay comfortable even in warm weather."
+
       },
       {
         "id": 5,
@@ -38,7 +45,9 @@
         "category": "accesories",
         "price": 44.99,
         "stock": 2,
-        "image": "./clothes/accesories.jpg"
+        "image": "./clothes/accesories.jpg",
+        "description": "Introducing our stylish and versatile T-shirt! Crafted with the perfect blend of comfort and contemporary design, this T-shirt is a must-have addition to your wardrobe. Made from premium quality, breathable cotton fabric, it ensures a soft and cozy feel against your skin, making it ideal for all-day wear. The lightweight material keeps you cool and fresh, allowing you to stay comfortable even in warm weather."
+
       },
       {
         "id": 6,
@@ -46,7 +55,9 @@
         "category": "sweater",
         "price": 10.00,
         "stock": 15,
-        "image": "./clothes/cottom-cyan-sweater.jpg"
+        "image": "./clothes/cottom-cyan-sweater.jpg",
+        "description": "Introducing our stylish and versatile T-shirt! Crafted with the perfect blend of comfort and contemporary design, this T-shirt is a must-have addition to your wardrobe. Made from premium quality, breathable cotton fabric, it ensures a soft and cozy feel against your skin, making it ideal for all-day wear. The lightweight material keeps you cool and fresh, allowing you to stay comfortable even in warm weather."
+
       }
     ]
   }

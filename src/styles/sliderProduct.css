@@ -1,0 +1,20 @@
+.wraper-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-bottom: 2rem;
+}
+.slider-container{
+    width: 93%;
+    padding: 1rem;
+    gap: 4vmin;
+    
+}
+.slider-product{
+    width: 40rem;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
