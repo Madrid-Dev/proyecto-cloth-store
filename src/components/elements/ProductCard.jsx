@@ -1,15 +1,17 @@
 import React from 'react';
 import './../../styles/product-card.css';
-
-const ProductCard = ({ productName, productPrice, productImage }) => {
+import { Link } from 'react-router-dom';
+const ProductCard = ({ productId,productName, productPrice, productImage }) => {
     const imageUrl = `${process.env.PUBLIC_URL}/${productImage}`;
     return (
-        <div className='product-item product-item-grid' style={{ backgroundImage: `url(${(imageUrl)})` }}>
-            <div className='product-item-info'>
-                <p>{productName}</p>
-                <p>${productPrice}</p>
+        <Link to={`/product/${Math.floor(productId)}`} >
+            <div className='product-item product-item-grid' style={{ backgroundImage: `url(${(imageUrl)})` }}>
+                <div className='product-item-info'>
+                    <p>{productName}</p>
+                    <p>${productPrice}</p>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }
  

@@ -20,6 +20,8 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Product from './components/Pages/Product';
 import ProductID from './components/ProductID';
 import Footer from './components/Footer';
+import AboutUs from './components/Pages/Aboutus';
+
 const Index = () => {
   library.add(faBars, faCartShopping,faCreditCard, faLocationPin, faExclamation, faRecycle,faHashtag,faXmark,faInfo, faMobile, faCopyright, faChevronLeft);
   return ( 
@@ -37,7 +39,7 @@ const Index = () => {
         }>
         </Route>
         <Route path='/about-us' element = {
-            <App />
+            <AboutUs />
         }>
         </Route>
         <Route path='/contact-us' element = {

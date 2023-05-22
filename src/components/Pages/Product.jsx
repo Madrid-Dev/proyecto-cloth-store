@@ -70,9 +70,9 @@ function Product() {
         <div className='product-grid-container'>
         {productos.map((producto) => {
               if(producto.category === category)
-              {return(<ProductCard productName = {producto.name} productPrice = {producto.price} key={producto.id} productImage={producto.image}/>)}
+              {return(<ProductCard productId ={producto.id} productName = {producto.name} productPrice = {producto.price} key={producto.id} productImage={producto.image}/>)}
               else if(category === 'all'){
-                return(<ProductCard productName = {producto.name} productPrice = {producto.price} key={producto.id} productImage={producto.image}/>);
+                return(<ProductCard productId ={producto.id} productName = {producto.name} productPrice = {producto.price} key={producto.id} productImage={producto.image}/>);
               }            
         })}
         </div>

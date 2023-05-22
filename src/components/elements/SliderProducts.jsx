@@ -3,12 +3,13 @@ import { useState } from 'react';
 import './../../styles/sliderProduct.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 const SliderC = ({products}) => {
     const length = products.length;
     const [sliderProd, setSliderProd] = useState([]);
 
     const randomNumbers = () =>{
-        return Math.floor(Math.random() * (length - 1 + 1)) + 1;
+        return Math.floor(Math.random() * (length -1)) + 1;
     }
 
     const ids = [randomNumbers(),randomNumbers(),randomNumbers(),randomNumbers(),randomNumbers()];
@@ -21,7 +22,6 @@ const SliderC = ({products}) => {
 
     useEffect(()=>{
         findProductsInSlider();
-        console.log(sliderProd);
     },[products])
 
 

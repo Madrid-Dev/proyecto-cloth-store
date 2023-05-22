@@ -2,7 +2,7 @@ import React from 'react';
 import './../../styles/home.css';
 import Footer from '../Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Link } from 'react-router-dom';
 /*Crear un json de cada ropa para la info*/
 const Home = () => {
     return (
@@ -11,8 +11,10 @@ const Home = () => {
                 <div className='categories'>
                     <div className = 'grid-container'>
                         <div className='grid-item grid-item-one'>
-                        <div className='grid-item-blackout'></div>
-                            <p>Accesories.</p>
+                            <Link to='/categories/accesories'>
+                                <div className='grid-item-blackout'></div>
+                                    <p>Accesories.</p>
+                            </Link>
                         </div>
                         
                         <div className='grid-container-inside-desktop'>
@@ -22,26 +24,37 @@ const Home = () => {
                             <div className='grid-item grid-item-five'></div>
                         </div>
                         
-                        <div className='grid-item grid-item-two'>
-                        <div className='grid-item-blackout'></div>
-                            <p>Seasonal.</p>
-                        </div>
+                            <div className='grid-item grid-item-two'>
+                                <Link to='/categories/seasonal'>
+                                    <div className='grid-item-blackout'></div>
+                                        <p>Seasonal.</p>
+                                </Link>
+                            </div>
+                        
                         <div className='grid-item grid-item-three'>
-                        <div className='grid-item-blackout'></div>
-                            <p>Shoes.</p>
+                            <Link to='/categories/shoes'>
+                                <div className='grid-item-blackout'></div>
+                                    <p>Shoes.</p>
+                            </Link>
                         </div>
                         <div className='grid-item grid-item-four'>
-                        <div className='grid-item-blackout'></div>
-                            <p>Store.</p>
+                            <Link to='/categories/all'>
+                                <div className='grid-item-blackout'></div>
+                                    <p>Store.</p>
+                            </Link>
                         </div>
 
                         <div className='grid-item grid-item-five'>
-                        <div className='grid-item-blackout'></div>
-                            <p>Classic.</p>
+                            <Link to='/categories/classic'>
+                                <div className='grid-item-blackout'></div>
+                                    <p>Classic.</p>
+                            </Link>
                         </div>
                         <div className='grid-item grid-item-six'>
-                        <div className='grid-item-blackout'></div>
-                            <p>Unique.</p>
+                            <Link to='/categories/other'>
+                                <div className='grid-item-blackout'></div>
+                                    <p>Unique.</p>
+                            </Link>
                         </div>
 
                     </div>
@@ -62,10 +75,12 @@ const Home = () => {
             
             <div className = 'grid-container favourites'>
                 <div className='grid-item grid-item-one'>
-                    <div className='grid-item-info'>
-                        <p>Sweater</p>
-                        <p>$20.00</p>
-                    </div>
+                    <Link to='/product/6'>
+                        <div className='grid-item-info'>
+                            <p>Sweater</p>
+                            <p>$20.00</p>
+                        </div>
+                    </Link>
                 </div>
                 
                 <div className='grid-container-inside-desktop'>
@@ -76,22 +91,28 @@ const Home = () => {
                 </div>
                 
                 <div className='grid-item grid-item-two'>
-                <div className='grid-item-info'>
-                        <p>King T-Shirt</p>
-                        <p>$15.00</p>
-                    </div>
+                    <Link to='/product/1'>
+                        <div className='grid-item-info'>
+                                <p>King T-Shirt</p>
+                                <p>$15.00</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='grid-item grid-item-three'>
-                <div className='grid-item-info'>
-                        <p>Orange T-Shirt</p>
-                        <p>$10.00</p>
-                    </div>
+                    <Link to='/product/2'>
+                        <div className='grid-item-info'>
+                                <p>Orange T-Shirt</p>
+                                <p>$10.00</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='grid-item grid-item-four'>
-                <div className='grid-item-info'>
-                        <p>Beige Top</p>
-                        <p>$14.00</p>
-                    </div>
+                    <Link to='/product/4'>
+                        <div className='grid-item-info'>
+                                <p>Beige Top</p>
+                                <p>$14.00</p>
+                        </div>
+                    </Link>
                 </div>
 
             </div>

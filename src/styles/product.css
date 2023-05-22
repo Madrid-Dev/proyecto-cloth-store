@@ -28,7 +28,7 @@ h1{
     padding-top:10vh;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100% !important;
     justify-content: center;
     align-items: center;
     font-family: 'Fira Sans', sans-serif;
