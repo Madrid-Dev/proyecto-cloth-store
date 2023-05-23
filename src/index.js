@@ -21,6 +21,7 @@ import Product from './components/Pages/Product';
 import ProductID from './components/ProductID';
 import Footer from './components/Footer';
 import AboutUs from './components/Pages/Aboutus';
+import ContactUs from './components/Pages/Contactus';
 
 const Index = () => {
   library.add(faBars, faCartShopping,faCreditCard, faLocationPin, faExclamation, faRecycle,faHashtag,faXmark,faInfo, faMobile, faCopyright, faChevronLeft);
@@ -43,7 +44,7 @@ const Index = () => {
         }>
         </Route>
         <Route path='/contact-us' element = {
-            <App />
+            <ContactUs />
         }>
         </Route>
         <Route path='/product/:id' element = {

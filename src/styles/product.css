@@ -25,7 +25,7 @@ h1{
 }
 /*General Container*/
 .product-container{
-    padding-top:10vh;
+    padding-top:13vh;
     display: flex;
     flex-direction: column;
     width: 100% !important;
