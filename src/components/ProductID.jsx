@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './../styles/productid.css';
 import SliderC from './elements/SliderProducts';
 import Footer from './Footer';
+import { CartContext } from './CartProvider';
 
 const ProductID = () => {
     const {id} = useParams();
+    const {addToCart} = useContext(CartContext);
     const idNumber = Math.floor(id);
     const [products,setProducts] = useState([]);
     const [actualProduct, setActual] = useState([]);
@@ -35,6 +37,10 @@ const ProductID = () => {
           setActual(foundProduct);
         }
       }
+
+      const handleAddToCart = () =>{
+        addToCart(actualProduct);
+      }
     return (
         <div className='wraper'>
             <div className='product-container'>
@@ -58,7 +64,7 @@ const ProductID = () => {
 
                         <div className='product-buttons'>
                             <div className='button buy-button'>BUY NOW</div>
-                            <div className='button add-cart-button'>ADD TO CART</div>
+                            <div className='button add-cart-button' onClick={() =>handleAddToCart()}>ADD TO CART</div>
                         </div>
                     </div>
                 </div>

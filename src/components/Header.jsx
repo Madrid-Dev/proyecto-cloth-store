@@ -5,11 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from './../images/Elevated-logos.jpeg';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
+import CartComp from './elements/Cart';
 
 const Header = () => {
     const [mobileMenu,setMobileMenu] = useState(false);
     const [visible, setVisible] = useState(false);
-  
+    const [cartMenu,setCartMenu] = useState(false);
+
     const fadeAnimation = useSpring({
       opacity: visible ? 1 : 0,
       config: {
@@ -34,6 +36,11 @@ const Header = () => {
             </div>
         </div>
         </animated.div>
+        <animated.div style={fadeAnimation}>
+            <div className={cartMenu ? 'cart-menu-display' : 'cart-menu-off'} id='cart-menu' >
+                <CartComp></CartComp>
+            </div>
+        </animated.div>
         <div className='container'>
             <div className='logo-img'></div>
 
@@ -46,7 +53,10 @@ const Header = () => {
                 </ul>
             </div>
             <div className='container-icons'>
-                <FontAwesomeIcon className = "cart fa-xl" icon="fa-solid fa-cart-shopping "></FontAwesomeIcon>
+                <FontAwesomeIcon className = "cart fa-xl" icon="fa-solid fa-cart-shopping" onClick={()=>{
+                    setCartMenu(!cartMenu);
+                    toggleVisibility();
+                    }}></FontAwesomeIcon>
                 <FontAwesomeIcon className = "hamburger fa-xl" icon="fa-solid fa-bars " onClick={()=>{
                     setMobileMenu(!mobileMenu);
                     toggleVisibility();

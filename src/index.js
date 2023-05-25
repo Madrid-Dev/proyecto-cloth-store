@@ -22,38 +22,40 @@ import ProductID from './components/ProductID';
 import Footer from './components/Footer';
 import AboutUs from './components/Pages/Aboutus';
 import ContactUs from './components/Pages/Contactus';
+import {CartProvider} from './components/CartProvider';
 
 const Index = () => {
   library.add(faBars, faCartShopping,faCreditCard, faLocationPin, faExclamation, faRecycle,faHashtag,faXmark,faInfo, faMobile, faCopyright, faChevronLeft);
   return ( 
     <>
-    
-    <BrowserRouter>
-      <Header></Header>
-      <Routes>
-        <Route path='/' element = {
-            <App />
-        }>
-        </Route>
-        <Route path='/categories/:categoryParam' element = {
-            <Product />
-        }>
-        </Route>
-        <Route path='/about-us' element = {
-            <AboutUs />
-        }>
-        </Route>
-        <Route path='/contact-us' element = {
-            <ContactUs />
-        }>
-        </Route>
-        <Route path='/product/:id' element = {
-            <ProductID />
-        }>
-        </Route>
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element = {
+              <App />
+          }>
+          </Route>
+          <Route path='/categories/:categoryParam' element = {
+              <Product />
+          }>
+          </Route>
+          <Route path='/about-us' element = {
+              <AboutUs />
+          }>
+          </Route>
+          <Route path='/contact-us' element = {
+              <ContactUs />
+          }>
+          </Route>
+          <Route path='/product/:id' element = {
+              <ProductID />
+          }>
+          </Route>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
+    </CartProvider>
     </>
   );
 }
