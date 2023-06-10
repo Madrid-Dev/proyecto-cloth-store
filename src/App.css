@@ -2,6 +2,8 @@
 
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -30,17 +32,14 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 .body{
   padding-top: 10vh;
   background-color: #f9f9f9;
+}
+
+
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

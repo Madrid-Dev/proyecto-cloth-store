@@ -8,20 +8,23 @@ h1{
 .container-header{
     display: flex;
     width: 100%;
+    background-color: black;
+    color: white;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 .home-icon{
     text-decoration: none;
-    color:black;
+    color:white;
     display: flex;
     margin: 0;
     justify-content: space-between;
 }
 .home-icon p{
     margin: 0;
-    color: white;
+    color: black;
 }
 /*General Container*/
 .product-container{
@@ -36,17 +39,28 @@ h1{
 
 /*Grid*/
 .product-grid-container {
-    width: 90%;
-    display: grid;
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:top;
+    flex-direction: row;
     min-height: 45rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.3rem;
-    margin-top: 1.3rem;
-    background-color: white;
-    padding: 1rem;
+    background-color: rgba(231, 231, 140, 0.034);
+    margin-bottom: 6rem;
+}
+.product-grid-container a{
+    width: 100%;
+}
+.product-item{
+    height: 60vh;
+    width: 100%;
 }
 
+.product-item .product-item-info{
+    height: 40%;
+}
 /*Filters*/
 .product-filters{
     display: flex;
@@ -71,4 +85,42 @@ h1{
 .blank{
     width: 0;
     height: 0;
+}
+
+/*MQ*/
+/*Does not need for 600px*/
+@media screen and (min-width: 600px){
+    .product-grid-container{
+        width: 100%;
+    }
+    .product-grid-container a{
+        width: 50%;
+    }
+}
+/*850 px*/
+@media screen and (min-width: 850px){
+    .product-grid-container{
+        row-gap: 0;
+    }
+}
+
+/*1200 px*/
+@media screen and (min-width: 1200px){
+    .product-grid-container{
+        min-height: 60rem;
+
+    }
+    .product-grid-container a{
+        width: 30%;
+    }
+    .product-item .product-item-info p{
+        bottom: 20%;
+    }
+
+    .product-grid-container a:first-child div{
+        border-radius: 20px 0px 0px 0px;
+    }
+    .product-grid-container a:nth-child(3) div{
+        border-radius: 0px 20px 0px 0px;
+    }
 }

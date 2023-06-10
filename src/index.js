@@ -23,9 +23,10 @@ import Footer from './components/Footer';
 import AboutUs from './components/Pages/Aboutus';
 import ContactUs from './components/Pages/Contactus';
 import {CartProvider} from './components/CartProvider';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Index = () => {
-  library.add(faBars, faCartShopping,faCreditCard, faLocationPin, faExclamation, faRecycle,faHashtag,faXmark,faInfo, faMobile, faCopyright, faChevronLeft);
+  library.add(faBars,faTrash, faCartShopping,faCreditCard, faLocationPin, faExclamation, faRecycle,faHashtag,faXmark,faInfo, faMobile, faCopyright, faChevronLeft);
   return ( 
     <>
     <CartProvider>

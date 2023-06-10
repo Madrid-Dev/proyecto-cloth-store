@@ -13,7 +13,8 @@
 .footer-paragraph{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 4vmin;
     align-items: center;
 }
 

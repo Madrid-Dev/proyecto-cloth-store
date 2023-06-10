@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useState } from 'react';
 import './../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,12 +6,23 @@ import Logo from './../images/Elevated-logos.jpeg';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 import CartComp from './elements/Cart';
-
+import { CartContext } from './CartProvider';
 const Header = () => {
     const [mobileMenu,setMobileMenu] = useState(false);
     const [visible, setVisible] = useState(false);
     const [cartMenu,setCartMenu] = useState(false);
+    const {qty} = useContext(CartContext);
 
+    const handlexmark = ()=>{
+        if(mobileMenu){
+            setMobileMenu(false);
+            toggleVisibility();
+        }
+        if(cartMenu){
+            setCartMenu(false);
+            toggleVisibility();
+        }
+    }
     const fadeAnimation = useSpring({
       opacity: visible ? 1 : 0,
       config: {
@@ -53,14 +64,22 @@ const Header = () => {
                 </ul>
             </div>
             <div className='container-icons'>
-                <FontAwesomeIcon className = "cart fa-xl" icon="fa-solid fa-cart-shopping" onClick={()=>{
-                    setCartMenu(!cartMenu);
-                    toggleVisibility();
-                    }}></FontAwesomeIcon>
-                <FontAwesomeIcon className = "hamburger fa-xl" icon="fa-solid fa-bars " onClick={()=>{
-                    setMobileMenu(!mobileMenu);
-                    toggleVisibility();
-                    }}></FontAwesomeIcon>
+                {!visible ? <>
+                            <FontAwesomeIcon className = "cart fa-xl" icon="fa-solid fa-cart-shopping" onClick={()=>{
+                                setCartMenu(!cartMenu);
+                                toggleVisibility();
+                                }}></FontAwesomeIcon>
+                            <FontAwesomeIcon className = "hamburger fa-xl" icon="fa-solid fa-bars " onClick={()=>{
+                                setMobileMenu(!mobileMenu);
+                                toggleVisibility();
+                                }}></FontAwesomeIcon>
+                            {qty > 0 ? <div className='cart-container-count show'>{qty}</div> : <div className='cart-container-count hide'></div>} 
+                          </>
+                          :
+                          <FontAwesomeIcon className = "xmark" icon="fa-solid fa-xmark " onClick={()=>{handlexmark()}}></FontAwesomeIcon>
+                    }
+                
+                
             </div>
            
         </div>  

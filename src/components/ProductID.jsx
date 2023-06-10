@@ -12,6 +12,17 @@ const ProductID = () => {
     const idNumber = Math.floor(id);
     const [products,setProducts] = useState([]);
     const [actualProduct, setActual] = useState([]);
+    const [qty, setQty] = useState(1);
+
+    const handleAdd = () =>{
+      setQty(qty + 1);
+    }
+    const handleSub = () =>{
+      if(qty > 1){
+        setQty(qty - 1);
+      }
+    }
+
     useEffect(() => {
         /* Fetching */
         fetch(process.env.PUBLIC_URL + '/data/products.json')
@@ -39,24 +50,26 @@ const ProductID = () => {
       }
 
       const handleAddToCart = () =>{
-        addToCart(actualProduct);
+        addToCart(actualProduct,qty);
       }
     return (
         <div className='wraper'>
             <div className='product-container'>
                 <div className='product-header'>
                     <h2>{actualProduct.name}</h2>
-                    <img src={`${process.env.PUBLIC_URL}/${actualProduct.image}`} alt="" />            
+        
                 </div>
+                <div className='photo' style={{backgroundImage:`url(${process.env.PUBLIC_URL}/${actualProduct.image}`}} >   
+                    </div> 
 
                 <div className='product-description'>
                     <p>{actualProduct.description}</p>
                     <div className='product-price'>
                         <p>Quantity</p>
                         <div className='quantity'>
-                            <div className='less'>-</div>
-                            <div className='quantity-value'>0</div>
-                            <div className='plus'>+</div>
+                            <div className='less' onClick={handleSub}><p>-</p></div>
+                            <div className='quantity-value'>{qty}</div>
+                            <div className='plus' onClick={handleAdd}><p>+</p></div>
                         </div>
                         <div className='price'>
                             <p>${actualProduct.price}</p>
