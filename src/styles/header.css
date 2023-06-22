@@ -158,3 +158,66 @@
 .container-options-dsk{
     display: none;
 }
+
+.menu-display-desktop ul{
+    display: flex;
+    list-style: none;
+}
+
+
+/*Media query*/
+@media screen and (min-width:1024px){
+    .container-icons{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-container-count{
+        left: 3%;
+    }
+    .menu-display-desktop{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-display-desktop ul{
+        width: 70%;
+        padding-left: 0;
+        margin: 0;
+    }
+    .menu-display-desktop ul li{
+        margin-right: 10%;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width:1280px){
+    .container-icons{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-container-count{
+        left: 2%;
+    }
+    .menu-display-desktop{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-display-desktop ul{
+        width: 70%;
+        padding-left: 0;
+        margin: 0;
+    }
+    .menu-display-desktop ul li{
+        margin-right: 10%;
+        font-size: 1rem;
+    }
+    
+}

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import { useState } from 'react';
 import './../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +12,24 @@ const Header = () => {
     const [visible, setVisible] = useState(false);
     const [cartMenu,setCartMenu] = useState(false);
     const {qty} = useContext(CartContext);
+    const [isWidthSpecific, setIsWidthSpecific] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        const width = window.innerWidth;
+        console.log(width);
+        const isSpecific = width >= 1024; // Ancho específico que deseas detectar
+        setIsWidthSpecific(isSpecific);
+      };
+  
+      // Suscribirse al evento de cambio de tamaño de la ventana
+      window.addEventListener('resize', handleResize);
+  
+      // Limpieza: eliminar el evento de cambio de tamaño al desmontar el componente
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
     const handlexmark = ()=>{
         if(mobileMenu){
@@ -36,7 +54,7 @@ const Header = () => {
     return (
     <div className='navbar'>
         <animated.div style={fadeAnimation}>
-        <div className={mobileMenu ? 'mobile-menu-display' : 'mobile-menu-off'} id='mobile-menu' >
+        <div className={mobileMenu? 'mobile-menu-display' : 'mobile-menu-off'} id='mobile-menu' >
             <div className='container-options-mbl'>
                 <ul>
                     <li><Link to= "/" onClick={()=>{setMobileMenu(!mobileMenu);toggleVisibility();}}>Home</Link></li>
@@ -69,10 +87,24 @@ const Header = () => {
                                 setCartMenu(!cartMenu);
                                 toggleVisibility();
                                 }}></FontAwesomeIcon>
+                            {isWidthSpecific ? 
+                                <>
+                                  <div className='menu-display-desktop'>
+                                    <ul>
+                                        <li>Home</li>
+                                        <li>Contact</li>
+                                        <li>About Us</li>
+                                        <li>Contact Us</li>
+                                    </ul>  
+                                  </div>  
+                                </>
+                            :
                             <FontAwesomeIcon className = "hamburger fa-xl" icon="fa-solid fa-bars " onClick={()=>{
                                 setMobileMenu(!mobileMenu);
                                 toggleVisibility();
                                 }}></FontAwesomeIcon>
+                            }
+                            
                             {qty > 0 ? <div className='cart-container-count show'>{qty}</div> : <div className='cart-container-count hide'></div>} 
                           </>
                           :
