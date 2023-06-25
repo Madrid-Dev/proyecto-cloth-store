@@ -168,13 +168,14 @@
 /*Media query*/
 @media screen and (min-width:1024px){
     .container-icons{
-        width: 40%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: row-reverse;
     }
     .cart-container-count{
-        left: 3%;
+        left:96%;
     }
     .menu-display-desktop{
         width: 100%;
@@ -186,23 +187,31 @@
         width: 70%;
         padding-left: 0;
         margin: 0;
+        font-weight: bold;
+        text-transform: uppercase;
     }
     .menu-display-desktop ul li{
         margin-right: 10%;
         font-size: 1rem;
     }
+    .menu-display-desktop ul li a{
+        text-decoration: none;
+        color: black;
+    }
+
 
 }
 
 @media screen and (min-width:1280px){
     .container-icons{
-        width: 40%;
+        width: 50%;
         display: flex;
         justify-content: center;
+        position: relative;
         align-items: center;
     }
     .cart-container-count{
-        left: 2%;
+        left:96%;
     }
     .menu-display-desktop{
         width: 100%;

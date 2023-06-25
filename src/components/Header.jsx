@@ -21,7 +21,8 @@ const Header = () => {
         const isSpecific = width >= 1024; // Ancho específico que deseas detectar
         setIsWidthSpecific(isSpecific);
       };
-  
+     handleResize();
+
       // Suscribirse al evento de cambio de tamaño de la ventana
       window.addEventListener('resize', handleResize);
   
@@ -91,10 +92,10 @@ const Header = () => {
                                 <>
                                   <div className='menu-display-desktop'>
                                     <ul>
-                                        <li>Home</li>
-                                        <li>Contact</li>
-                                        <li>About Us</li>
-                                        <li>Contact Us</li>
+                                        <li><Link to= "/">Home</Link></li>
+                                        <li><Link to="/categories/all">Products</Link></li>
+                                        <li><Link to="/about-us">About us</Link></li>
+                                        <li><Link to="contact-us">Contact us</Link></li>
                                     </ul>  
                                   </div>  
                                 </>
