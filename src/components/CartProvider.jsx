@@ -37,7 +37,7 @@ const CartProvider = ({children}) => {
                     return{
                         ...elem,
                         quantity: elem.quantity + quant,
-                        totalPrice: elem.totalPrice + item.price
+                        totalPrice: elem.totalPrice + item.price*quant
                     };
                 }
                 return elem;
@@ -45,11 +45,11 @@ const CartProvider = ({children}) => {
             setQty(qty + quant);
             setCart(updatedCart);
         }else{
-            setCart([...cart,{item: item, quantity: 1, totalPrice: item.price}]);
+            setCart([...cart,{item: item, quantity: quant, totalPrice: item.price*quant}]);
             setQty(qty + quant);
         }
         
-        totalCalc(item.price);
+        totalCalc(item.price*quant);
         
     }
 
