@@ -46,7 +46,14 @@
 
 /*MQ*/
 /*Does not need for 600px*/
-
+@media screen and (min-width:1024px) {
+    .contactus h2{
+        font-size: 2rem;
+    }
+    .donate-button{
+        font-size: 2rem;
+    }
+}
 
 
 

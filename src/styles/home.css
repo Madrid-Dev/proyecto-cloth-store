@@ -111,7 +111,9 @@
 
 /*Discount*/
 .discount-container{
-    width: 100%;
+    width: 94%;
+    font-size: 4vw;
+    padding: 3.6vw;
     height: 30vh;
     background-color: #f3d503;
     display: flex;
@@ -258,12 +260,15 @@
     }
     .categories-container .grid-container .grid-item-three{
         grid-area: three; 
+        background-position: center;
     }
     .categories-container .grid-container .grid-item-four{
+        background-position: center;
         grid-area: four;
     }
     .categories-container .grid-container .grid-item-five{
         grid-area: five;
+        background-position: center;
     }
     .categories-container .grid-container .grid-item-six{
         grid-area: six;
@@ -273,7 +278,8 @@
     .discount-container{
         font-size: 1.5rem;
         height: 30vh;
-        margin-top: 8vmin;
+        margin-top: 4vmin;
+        margin-bottom: 6vmin;
     }
     /*Favourites*/
     .favourites{
